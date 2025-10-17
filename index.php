@@ -89,7 +89,12 @@ if ($result->num_rows > 0) {
 
 echo "<table>";
 
-echo "<thead><tr><th>ID</th><th>Nome</th><th>E-mail</th></tr></thead>";
+echo "<thead><tr> 
+<th>ID</th>
+<th>Nome</th>
+<th>E-mail</th>
+<th>Ação</th>
+</tr></thead>";
 
 echo "<tbody>";
 
@@ -107,7 +112,7 @@ echo "<td>" . $row["id"] . "</td>";
 echo "<td>" . $row["nome"] . "</td>";
 
 echo "<td>" . $row["email"] . "</td>";
-
+ 
 echo "</tr>";
 
 }
@@ -132,7 +137,6 @@ echo "<p class='no-results'>Nenhum resultado encontrado.</p>";
 $conn->close();
 
 ?>
-
     </div>
 
 </body>
