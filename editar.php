@@ -15,7 +15,7 @@ if (isset($_GET['edit_id']) && is_numeric($_GET['edit_id'])) {
     $usuario = $stmt_select->fetch(PDO::FETCH_ASSOC);
 
     //Se o usuário não for encontrado, redireciona para a página inicial
-    if (!usuario) {
+    if (!$usuario) {
         header('Location: index.php?msg=error_not_found');
         exit();
     }
