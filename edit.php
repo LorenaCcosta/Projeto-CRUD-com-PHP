@@ -75,7 +75,7 @@ if (isset($_GET['edit_id']) && is_numeric($_GET['edit_id'])) {
     <?php if ($usuario): ?>
     <div class="edit-form">
         <h3>Editar Usuário: <?= htmlspecialchars($usuario['nome']); ?></h3>
-        <form action="editar.php" method="POST">
+        <form action="edit.php" method="POST">
 
             <input type="hidden" name="id" value="<?= $usuario['id']; ?>">
             <label for="nome">Nome:</label><br>

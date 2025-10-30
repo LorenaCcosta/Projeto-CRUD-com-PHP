@@ -114,13 +114,13 @@ echo "<td>" . $row["nome"] . "</td>";
 echo "<td>" . $row["email"] . "</td>";
 
  echo "<td>
-        <a href='deletar.php?delete_id=" . $row['id'] . "' class='btn btn-sm btn-danger'>
-            <i class='fa-solid fa-trash'></i> Deletar
-        </a>
-        
-        <a href='editar.php?edit_id=" . $row['id'] . "' class='btn btn-sm btn-warning'>
-            <i class='fa-solid fa-pen-to-square'></i> Editar
-        </a>
+            <a href='delete.php?delete_id=" . $row['id'] . "' onclick='return confirm(\"Tem certeza que deseja deletar -> " . $row['nome'] . "?\");' class='btn btn-sm btn-danger'>
+                <i class='fa-solid fa-trash'></i> Deletar
+            </a>
+            
+            <a href='edit.php?edit_id=" . $row['id'] . "' class='btn btn-sm btn-warning'>
+                <i class='fa-solid fa-pen-to-square'></i> Editar
+            </a>
       </td>";
 
  
